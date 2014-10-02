@@ -175,7 +175,9 @@
       			</ons-list>
       		</div>
       		<div>
-      			<ons-button class="log" modifier="light" onclick="app_navigator.pushPage('main.html')">	
+
+      			<ons-button class="log" modifier="light" onclick="app_navigator.pushPage('sliding_menu.html')">	
+
         			<ons-icon icon="ion-person"></ons-icon>
         			Log in
         		</ons-button>
@@ -271,12 +273,32 @@
      </ons-page>
 </ons-template>  
 
+
     
 <!--Main-->
+
+
+
+<ons-template id="sliding_menu.html">
+  <ons-sliding-menu var="filter_menu" 
+                      above-page="main.html" 
+                      behind-page="menu.html"
+                      max-slide-distance="200px" 
+                      type="push" 
+                      side="left">
+	</ons-sliding-menu>
+</ons-template>
+
+
+
 <ons-template id="main.html">
 	<ons-page>
       <ons-toolbar class="tb">
-        	<div class="left"><ons-back-button></ons-back-button></div>
+      		<div class="left">
+          		<ons-toolbar-button ng-click="filter_menu.toggleMenu()">
+            		<ons-icon icon="ion-navicon-round" style="font-size: 32px; width: 1em">
+          		</ons-toolbar-button>
+        	</div>
        		<div class="center logo">ippo</div>
       </ons-toolbar>
 	      <!-- Contenuto della pagina principale -->
@@ -288,6 +310,7 @@
 		</div>
      </ons-page>
 </ons-template>
+
 
 <!--Detail-->
 <ons-template id="detail.html">
@@ -308,6 +331,43 @@
 	   </div>
      </ons-page>
 </ons-template>
+
+
+<ons-template id="menu.html">
+	<ons-page>
+		<div class="filter-container">
+			<div class="menu_filter active">
+				<a class="filter proj-filter">Project</a>				
+			</div>
+			<div class="menu_filter">
+				<a class="filter tag-tilter">Tag</a>
+			</div>
+		</div>	
+		
+		<div class="list-container-menu">
+			<div class="filter_list active_list">
+				<ons-scroller>
+      				<ons-list>
+      					<ons-list-item class="list-box">project name</ons-list-item>
+      					<ons-list-item class="list-box">project name</ons-list-item>
+      					<ons-list-item class="list-box">project name</ons-list-item>
+      					<ons-list-item class="list-box">project name</ons-list-item>
+      					<ons-list-item class="list-box">project name</ons-list-item>
+      					<ons-list-item class="list-box">project name</ons-list-item>
+      					<ons-list-item class="list-box">project name</ons-list-item>
+      					<ons-list-item class="list-box">project name</ons-list-item>
+      					<ons-list-item class="list-box">project name</ons-list-item>
+      					<ons-list-item class="list-box">project name</ons-list-item>
+
+      		
+      			</ons-list>
+      		</ons-scroller>
+      		</div>
+		</div>
+	</ons-page>
+</ons/template>
+
+
 
 
 

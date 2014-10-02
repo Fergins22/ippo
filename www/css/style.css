@@ -151,6 +151,59 @@ body.logged .tb{
 
 
 }
+.filter-container{
+	width:200px;
+	height:44px;
+	background-color:#333;
+	position:absolute;
+	top:0;
+	left:0;
+
+}
+.menu_filter{
+	float:left;
+	margin:0;
+	width:76px;
+	height:50%;
+	text-align:center;
+	padding:12px;
+	background-color:rgba(0, 0, 0, 0.8)
+
+	}
+
+.list-container-menu{
+	background-color:#333;
+	height:100%;
+}
+
+
+.filter{
+	font-family:'Roboto';
+	font-size:20px;
+	color:#fafafa;
+
+
+}
+
+.filter-container div.active{
+	background-color:#e7406d;
+}
+
+.filter_list{
+	margin-top:44px;
+	background-color:#333;
+	height:500px;
+}
+
+.list-box{
+	background-color:#333;
+	height:60px;
+	width:200px;
+	color:#fafafa;
+	font-family:'Roboto';
+	font-size:20px;
+
+
 
 .modal-box{
     width:80%;
