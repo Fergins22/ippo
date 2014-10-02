@@ -186,9 +186,20 @@
       <ons-toolbar class="tb">
        		<div class="center logo">ippo</div>
       </ons-toolbar>
+        
+        <!--modale-->
+        <ons-modal var="modal">
+            <div class="modal-box">
+                <div class="message-modal">Sei sicuro?</div>
+                <ons-button class="secondary-bg button-modal">Si</ons-button>
+                <ons-button class="secondary-bg button-modal">No</ons-button>
+            </div>
+        
+        </ons-modal>
+        
 	      <!-- Contenuto della pagina principale -->
 	            <ons-list>
-        <ons-list-item class="list__item--tappable list__item__line-height list_directory" modifier="chevron">
+        <ons-list-item class="list__item--tappable list__item__line-height list_directory" modifier="chevron" onclick="modal.show()">
         	<ons-row>
         		<ons-col class="directory_img" width="20%">
         			<img src="img/cartella_light.png" width="70px">
@@ -196,8 +207,8 @@
         		<ons-col  class="directory_name">
         			project
         		</ons-col>
-        		
         	</ons-row>
+
         
         </ons-list-item>
         
