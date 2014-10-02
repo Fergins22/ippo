@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<!--
+  * Please see the included README.md file for license terms and conditions.
+  -->
+<head>
+    <title>IPPO</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<!-- CSS -->
+  <link  rel='stylesheet' href='css/vendor/onsenui.css'>
+  <link  rel='stylesheet' href='css/vendor/onsen-css-components.css'>
+  <link  rel='stylesheet' href='css/style.css'>
+
+  <!-- AngularJS -->
+ 
+  <script src='js/vendor/angular/angular.js' type="text/javascript"></script>
+  
+  <script src='js/vendor/onsenui_all.min.js' type="text/javascript"></script>
+  
+  
+    <script>
+    /* Script di iniziazzione */
+
+    /* Inizializzo Onsenui*/
+    ons.bootstrap();
+
+    /* Quando e' pronta inizializzo l'applicazione */
+    ons.ready(function() {
+   
+    });
+  </script>
+
+
+
+<!--
+  * The "meta viewport" tag (below) helps your app size appropriately to a device's screen.
+  * Note that the meta viewport approach is being phased out in favor of the @viewport CSS rule.
+  * For a quick overview of both, see this article:
+  *   http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/quick-tip-dont-forget-the-viewport-meta-tag
+  * To see what happens, try the app on a real device with and without a "meta viewport" tag.
+-->
+
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes, minimum-scale=1, maximum-scale=2"> -->
+
+    <style>
+    /* following three (cascaded) are equivalent to above three meta viewport statements */
+    /* see http://www.quirksmode.org/blog/archives/2014/05/html5_dev_conf.html */
+    /* see http://dev.w3.org/csswg/css-device-adapt/ */
+        @-ms-viewport { width: 100vw ; zoom: 100% ; }                           @viewport { width: 100vw ; zoom: 100% ; }
+        @-ms-viewport { user-zoom: fixed ; }                                    @viewport { user-zoom: fixed ; }
+        /*@-ms-viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }   @viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }*/
+    </style>
+
+<!-- See long explanation at the bottom of this file for info regarding placement of JS libraries. -->
+<!-- These library references (below) are just examples to give you the general idea... -->
+    <!-- <script src="lib/ft/fastclick.js"></script> -->
+    <!-- <script src="lib/jq/jquery.js"></script> -->
+    <!-- <script src="lib/af/jq.appframework.js"></script> -->
+    <!-- <script src="lib/af/appframework.ui.js"></script> -->
+
+    <!-- <link rel="stylesheet" href="lib/af/icons.css"> -->
+    <!-- <link rel="stylesheet" href="lib/af/af.ui.css"> -->
+<!--
+    <script>
+		// if you're using App Framework, you might want to do this
+        $.ui.autoLaunch = false ;
+        // and then use $.ui.launch() in the app.initApplication() function
+        // see https://github.com/01org/appframework/blob/master/documentation/detail/%24.ui.launch.md
+    </script>
+-->
+    <link rel="stylesheet" href="css/app.css">
+</head>
+
+
+<body class="logged">
+
+<ons-navigator var="app_navigator">
+  <ons-page >
+	<ons-toolbar class="tb">
+        <div class="center logo" >ippo</div>
+        <div class="left">
+          
+        </div>
+        
+      </ons-toolbar>
+      
+      <!-- Contenuto della pagina principale -->
+      <div class="unlog_page intro" style="text-align: center; height: 100% ">
+        <br />
+        <div class="image_intro"></div>
+        <div>
+        <ons-button class="sign" "modifier="light" onclick="app_navigator.pushPage('signup.html')">	
+        	<ons-icon icon="ion-person-add"></ons-icon>
+        	Create account
+        </ons-button>
+        
+        <ons-button class="log" "modifier="light" onclick="app_navigator.pushPage('login.html')">	
+        	<ons-icon icon="ion-person"></ons-icon>
+        	Log in
+        </ons-button>
+        
+         
+        </div>
+      </div>
+ </ons-page>
+</ons-navigator>
+
+<ons-template id="signup.html">
+	<ons-page>
+      <ons-toolbar class="tb">
+        	<div class="left"><ons-back-button></ons-back-button></div>
+       		<div class="center logo">ippo</div>
+      </ons-toolbar>
+	      <!-- Contenuto della pagina principale -->
+      <div class="unlog_page" style="text-align: center; height: 100% "> <br />
+			<div class="image_log_sign"></div>
+        	<div class="input_area">
+        		<ons-list class="unlog_list" style="width: 90%; margin:0 auto">
+      				<ons-list-item style="border-bottom:2px solid #e7406d; margin-bottom:20px">
+        				<ons-row>
+ 				 			<ons-col width="10%"><ons-icon icon="ion-email"></ons-icon></ons-col>
+  				 			<ons-col><input type="text" placeholder="Email" class="text-input text-input--transparent testo_input" style="margin-top:5px; width: 100%;">
+							</ons-col>			
+						</ons-row>
+					</ons-list-item>
+					<ons-list-item style="border-bottom:2px solid #e7406d">
+        				<ons-row>
+ 				 			<ons-col width="10%"><ons-icon icon="ion-key"></ons-icon></ons-col>
+  				 			<ons-col><input type="text" placeholder="Password" class="text-input text-input--transparent testo_input" style="margin-top:5px; width: 100%;">
+							</ons-col>			
+						</ons-row>
+					</ons-list-item>
+      			</ons-list>
+      		</div>
+      		<div>
+      			<ons-button class="sign" "modifier="light" onclick="app_navigator.pushPage('directory.html')">	
+        			<ons-icon icon="ion-person-add"></ons-icon> Create account
+        		</ons-button>
+        	</div>
+      </div>
+     </ons-page>
+</ons-template>  
+
+<ons-template id="login.html">
+	<ons-page>
+      <ons-toolbar class="tb">
+        	<div class="left"><ons-back-button></ons-back-button></div>
+       		<div class="center logo">ippo</div>
+      </ons-toolbar>
+	      <!-- Contenuto della pagina principale -->
+      <div class="unlog_page" style="text-align: center; height: 100% "> <br />
+			<div class="image_log_sign"></div>
+        	<div class="input_area">
+        		<ons-list class="unlog_list" style="width: 90%; margin:0 auto">
+      				<ons-list-item style="border-bottom:2px solid #23a69a; margin-bottom:20px">
+        				<ons-row>
+ 				 			<ons-col width="10%"><ons-icon icon="ion-email"></ons-icon></ons-col>
+  				 			<ons-col><input type="text" placeholder="Email" class="text-input text-input--transparent testo_input" style="margin-top:5px; width: 100%;">
+							</ons-col>			
+						</ons-row>
+					</ons-list-item>
+					<ons-list-item style="border-bottom:2px solid #23a69a">
+        				<ons-row>
+ 				 			<ons-col width="10%"><ons-icon icon="ion-key"></ons-icon></ons-col>
+  				 			<ons-col><input type="text" placeholder="Password" class="text-input text-input--transparent testo_input" style="margin-top:5px; width: 100%;">
+							</ons-col>			
+						</ons-row>
+					</ons-list-item>
+      			</ons-list>
+      		</div>
+      		<div>
+      			<ons-button class="log" "modifier="light" onclick="app_navigator.pushPage('main.html')">	
+        			<ons-icon icon="ion-person"></ons-icon>
+        			Log in
+        		</ons-button>
+        	</div>
+      </div>
+     </ons-page>
+</ons-template>  
+
+
+<ons-template id="directory.html">
+	<ons-page>
+      <ons-toolbar class="tb">
+       		<div class="center logo">ippo</div>
+      </ons-toolbar>
+	      <!-- Contenuto della pagina principale -->
+	            <ons-list>
+        <ons-list-item class="list__item--tappable list__item__line-height list_directory" modifier="chevron">
+        	<ons-row>
+        		<ons-col class="directory_img" width="20%">
+        			<img src="img/cartella_light.png" width="70px">
+        		</ons-col>
+        		<ons-col  class="directory_name">
+        			project
+        		</ons-col>
+        		
+        	</ons-row>
+        
+        </ons-list-item>
+        
+          <ons-list-item class="list__item--tappable list__item__line-height list_directory" modifier="chevron">
+        	<ons-row>
+        		<ons-col class="directory_img" width="20%">
+        			<img src="img/cartella_light.png" width="70px">
+        		</ons-col>
+        		<ons-col  class="directory_name">
+        			project
+        		</ons-col>
+        		
+        	</ons-row>
+        
+        </ons-list-item>
+        
+          <ons-list-item class="list__item--tappable list__item__line-height list_directory" modifier="chevron">
+        	<ons-row>
+        		<ons-col class="directory_img" width="20%">
+        			<img src="img/cartella_light.png" width="70px">
+        		</ons-col>
+        		<ons-col  class="directory_name">
+        			project
+        		</ons-col>
+        		
+        	</ons-row>
+        
+        </ons-list-item>
+        
+          <ons-list-item class="list__item--tappable list__item__line-height list_directory" modifier="chevron">
+        	<ons-row>
+        		<ons-col class="directory_img" width="20%">
+        			<img src="img/cartella_light.png" width="70px">
+        		</ons-col>
+        		<ons-col  class="directory_name">
+        			project
+        		</ons-col>
+        		
+        	</ons-row>
+        
+        </ons-list-item>
+        
+          <ons-list-item class="list__item--tappable list__item__line-height list_directory" modifier="chevron">
+        	<ons-row>
+        		<ons-col class="directory_img" width="20%">
+        			<img src="img/cartella_light.png" width="70px">
+        		</ons-col>
+        		<ons-col  class="directory_name">
+        			project
+        		</ons-col>
+        		
+        	</ons-row>
+        
+        </ons-list-item>
+      </ons-list>
+     </ons-page>
+</ons-template>  
+
+
+<ons-template id="main.html">
+	<ons-page>
+      <ons-toolbar class="tb">
+        	<div class="left"><ons-back-button></ons-back-button></div>
+       		<div class="center logo">ippo</div>
+      </ons-toolbar>
+	      <!-- Contenuto della pagina principale -->
+	    <div class="photo_container image_back">
+			<div class="photo"></div>
+			<div class="photo"></div>
+			<div class="photo"></div>
+			<div class="photo"></div>
+		</div>
+     </ons-page>
+</ons-template>
+
+
+
+
+
+
+</body>
+</html>
+
