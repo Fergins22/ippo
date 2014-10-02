@@ -75,7 +75,8 @@
 
 
 <body class="logged">
-
+    
+<!-- Contenuto della pagina principale -->
 <ons-navigator var="app_navigator">
   <ons-page >
 	<ons-toolbar class="tb">
@@ -86,17 +87,16 @@
         
       </ons-toolbar>
       
-      <!-- Contenuto della pagina principale -->
       <div class="unlog_page intro" style="text-align: center; height: 100% ">
         <br />
         <div class="image_intro"></div>
         <div>
-        <ons-button class="sign" "modifier="light" onclick="app_navigator.pushPage('signup.html')">	
+        <ons-button class="sign" modifier="light" onclick="app_navigator.pushPage('signup.html')">	
         	<ons-icon icon="ion-person-add"></ons-icon>
         	Create account
         </ons-button>
         
-        <ons-button class="log" "modifier="light" onclick="app_navigator.pushPage('login.html')">	
+        <ons-button class="log" modifier="light" onclick="app_navigator.pushPage('login.html')">	
         	<ons-icon icon="ion-person"></ons-icon>
         	Log in
         </ons-button>
@@ -107,13 +107,15 @@
  </ons-page>
 </ons-navigator>
 
+    
+<!--sigup-->
 <ons-template id="signup.html">
 	<ons-page>
       <ons-toolbar class="tb">
         	<div class="left"><ons-back-button></ons-back-button></div>
        		<div class="center logo">ippo</div>
       </ons-toolbar>
-	      <!-- Contenuto della pagina principale -->
+
       <div class="unlog_page" style="text-align: center; height: 100% "> <br />
 			<div class="image_log_sign"></div>
         	<div class="input_area">
@@ -135,21 +137,23 @@
       			</ons-list>
       		</div>
       		<div>
-      			<ons-button class="sign" "modifier="light" onclick="app_navigator.pushPage('directory.html')">	
+      			<ons-button class="sign" modifier="light" onclick="app_navigator.pushPage('directory.html')">	
         			<ons-icon icon="ion-person-add"></ons-icon> Create account
         		</ons-button>
         	</div>
       </div>
      </ons-page>
-</ons-template>  
-
+</ons-template> 
+                                                   
+                                                   
+<!--login-->
 <ons-template id="login.html">
 	<ons-page>
       <ons-toolbar class="tb">
         	<div class="left"><ons-back-button></ons-back-button></div>
        		<div class="center logo">ippo</div>
       </ons-toolbar>
-	      <!-- Contenuto della pagina principale -->
+
       <div class="unlog_page" style="text-align: center; height: 100% "> <br />
 			<div class="image_log_sign"></div>
         	<div class="input_area">
@@ -171,7 +175,7 @@
       			</ons-list>
       		</div>
       		<div>
-      			<ons-button class="log" "modifier="light" onclick="app_navigator.pushPage('main.html')">	
+      			<ons-button class="log" modifier="light" onclick="app_navigator.pushPage('main.html')">	
         			<ons-icon icon="ion-person"></ons-icon>
         			Log in
         		</ons-button>
@@ -187,14 +191,14 @@
        		<div class="center logo">ippo</div>
       </ons-toolbar>
         
-        <!--modale-->
+        
+<!--modale-->
         <ons-modal var="modal">
             <div class="modal-box">
                 <div class="message-modal">Sei sicuro?</div>
-                <ons-button class="secondary-bg button-modal">Si</ons-button>
+                <ons-button class="secondary-bg button-modal" onclick="app_navigator.pushPage('detail.html')">Si</ons-button>
                 <ons-button class="secondary-bg button-modal">No</ons-button>
             </div>
-        
         </ons-modal>
         
 	      <!-- Contenuto della pagina principale -->
@@ -267,7 +271,8 @@
      </ons-page>
 </ons-template>  
 
-
+    
+<!--Main-->
 <ons-template id="main.html">
 	<ons-page>
       <ons-toolbar class="tb">
@@ -284,7 +289,25 @@
      </ons-page>
 </ons-template>
 
-
+<!--Detail-->
+<ons-template id="detail.html">
+	<ons-page>
+      <ons-toolbar class="tb">
+        	<div class="left"><ons-back-button></ons-back-button></div>
+       		<div class="center logo">ippo</div>
+      </ons-toolbar>
+        
+        <div>
+            <div class="photo-detail">
+            </div>  
+            <div class="description">
+                <div>Titolo</div>
+                <div>Tags</div>
+                <div>Description </div>
+            </div>
+	   </div>
+     </ons-page>
+</ons-template>
 
 
 
