@@ -91,15 +91,17 @@
         <br />
         <div class="image_intro"></div>
         <div>
-        <ons-button class="sign" "modifier="light" onclick="app_navigator.pushPage('signup.html')">	
+        <ons-button class="sign" modifier="light" onclick="app_navigator.pushPage('signup.html')">	
         	<ons-icon icon="ion-person-add"></ons-icon>
         	Create account
         </ons-button>
         
-        <ons-button class="log" "modifier="light" onclick="app_navigator.pushPage('login.html')">	
+        <ons-button class="log" modifier="light" onclick="app_navigator.pushPage('login.html')">	
         	<ons-icon icon="ion-person"></ons-icon>
         	Log in
         </ons-button>
+
+         <a style="color:white;" onclick="app_navigator.pushPage('no_network.html')">    Pagine Servizi</a>
         
          
         </div>
@@ -107,6 +109,7 @@
  </ons-page>
 </ons-navigator>
 
+<!-- SIGNUP --> 
 <ons-template id="signup.html">
 	<ons-page>
       <ons-toolbar class="tb">
@@ -115,27 +118,35 @@
       </ons-toolbar>
 	      <!-- Contenuto della pagina principale -->
       <div class="unlog_page" style="text-align: center; height: 100% "> <br />
-			<div class="image_log_sign"></div>
-        	<div class="input_area">
-        		<ons-list class="unlog_list" style="width: 90%; margin:0 auto">
-      				<ons-list-item style="border-bottom:2px solid #e7406d; margin-bottom:20px">
-        				<ons-row>
- 				 			<ons-col width="10%"><ons-icon icon="ion-email"></ons-icon></ons-col>
-  				 			<ons-col><input type="text" placeholder="Email" class="text-input text-input--transparent testo_input" style="margin-top:5px; width: 100%;">
-							</ons-col>			
-						</ons-row>
-					</ons-list-item>
-					<ons-list-item style="border-bottom:2px solid #e7406d">
-        				<ons-row>
- 				 			<ons-col width="10%"><ons-icon icon="ion-key"></ons-icon></ons-col>
-  				 			<ons-col><input type="text" placeholder="Password" class="text-input text-input--transparent testo_input" style="margin-top:5px; width: 100%;">
-							</ons-col>			
-						</ons-row>
-					</ons-list-item>
-      			</ons-list>
-      		</div>
+			
+      <div class="image_log_sign"></div>
+
+          	<div class="input_area">
+
+          		<ons-list class="unlog_list" style="width: 90%; margin:0 auto">
+
+          				<ons-list-item  class="ippo_input ippo_input_bas" style="margin-bottom:20px">
+              				<ons-row>
+       				 			<ons-col width="10%"><ons-icon icon="ion-email"></ons-icon></ons-col>
+        				 			<ons-col><input type="text" placeholder="Email" class="text-input text-input--transparent testo_input" style="margin-top:5px; width: 100%;">
+      							</ons-col>			
+      						</ons-row>
+      					</ons-list-item>
+
+      					<ons-list-item  class="ippo_input">
+              				<ons-row>
+       				 			<ons-col width="10%"><ons-icon icon="ion-key"></ons-icon></ons-col>
+        				 			<ons-col><input type="text" placeholder="Password" class="text-input text-input--transparent testo_input" style="margin-top:5px; width: 100%;">
+      							</ons-col>			
+      						</ons-row>
+      				</ons-list-item>
+
+        			</ons-list>
+
+        		</div>
+
       		<div>
-      			<ons-button class="sign" "modifier="light" onclick="app_navigator.pushPage('directory.html')">	
+      			<ons-button class="sign" modifier="light" onclick="app_navigator.pushPage('directory.html')">	
         			<ons-icon icon="ion-person-add"></ons-icon> Create account
         		</ons-button>
         	</div>
@@ -143,6 +154,7 @@
      </ons-page>
 </ons-template>  
 
+<!-- LOGIN --> 
 <ons-template id="login.html">
 	<ons-page>
       <ons-toolbar class="tb">
@@ -171,7 +183,7 @@
       			</ons-list>
       		</div>
       		<div>
-      			<ons-button class="log" "modifier="light" onclick="app_navigator.pushPage('main.html')">	
+      			<ons-button class="log" modifier="light" onclick="app_navigator.pushPage('main.html')">	
         			<ons-icon icon="ion-person"></ons-icon>
         			Log in
         		</ons-button>
@@ -181,6 +193,94 @@
 </ons-template>  
 
 
+<!--
+  PAGINE SERVIZIO
+      no_network.html
+      authorize_dbx.html
+      confirm_dbx.html
+      waiting_img.html
+--> 
+
+<ons-template id="no_network.html">
+  <ons-page>
+      <ons-toolbar class="tb">
+          <div class="left"><ons-back-button></ons-back-button></div>
+          <div class="center logo">ippo</div>
+      </ons-toolbar>
+        <!-- Contenuto della pagina principale -->
+      <div  style="text-align: center; height: 100% "> <br />
+        <div class="image_log_serv"></div>
+        <p class="p_med_black">  Non riesco ad <br> accedere alla rete! <p> 
+          <p class="p_big_black">   Torna più tardi<p> 
+        <ons-button onclick="app_navigator.pushPage('authorize_dbx.html')"> 
+          authorize
+        </ons-button>
+         <ons-button onclick="app_navigator.pushPage('confirm_dbx.html')"> 
+           confirm
+        </ons-button>
+         <ons-button onclick="app_navigator.pushPage('waiting_img.html')"> 
+          wainting
+        </ons-button>
+        </div>
+
+     </ons-page>
+</ons-template>  
+
+<ons-template id="authorize_dbx.html">
+  <ons-page>
+      <ons-toolbar class="tb">
+          <div class="left"><ons-back-button></ons-back-button></div>
+          <div class="center logo">ippo</div>
+      </ons-toolbar>
+        <!-- Contenuto della pagina principale -->
+      <div  style="text-align: center; height: 100% "> <br />
+        <div class="image_log_serv"></div>
+        <p class="p_med_black">  Non sei autorizzato <br> a Dropbox!<p> 
+        <ons-button class="log" modifier="light" onclick="app_navigator.pushPage('#.html')"> 
+           Confermami
+        </ons-button>
+        </div>
+     </ons-page>
+</ons-template>  
+
+<ons-template id="confirm_dbx.html">
+  <ons-page>
+      <ons-toolbar class="tb">
+          <div class="left"><ons-back-button></ons-back-button></div>
+          <div class="center logo">ippo</div>
+      </ons-toolbar>
+        <!-- Contenuto della pagina principale -->
+      <div  style="text-align: center; height: 100% "> <br />
+        <div class="image_log_serv"></div>
+        <p class="p_med_black">  Hai collegato il tuo <br> account Dropbox?<p> 
+        <ons-button class="log" modifier="light" onclick="app_navigator.pushPage('#.html')"> 
+           Ho confermato
+        </ons-button>
+
+        <div>
+        <a style="color:red; font-size:12px;" onclick="app_navigator.pushPage('#.html')"> Ritorna a Dropbox</a>
+        </div>
+
+        </div>
+     </ons-page>
+</ons-template>  
+
+<ons-template id="waiting_img.html">
+  <ons-page>
+      <ons-toolbar class="tb">
+          <div class="left"><ons-back-button></ons-back-button></div>
+          <div class="center logo">ippo</div>
+      </ons-toolbar>
+        <!-- Contenuto della pagina principale -->
+      <div  style="text-align: center; height: 100% "> <br />
+        <div class="image_log_serv"></div>
+        <p class="p_med_black"> Stiamo elaborando le  <br> tue immagini<p> 
+         <p class="p_big_black">   Torna più tardi<p> 
+        </div>
+     </ons-page>
+</ons-template>  
+
+<!-- DIRECTORY  -->
 <ons-template id="directory.html">
 	<ons-page>
       <ons-toolbar class="tb">

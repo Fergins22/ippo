@@ -8,28 +8,69 @@
    src: url('font/IntriqueScript_PersonalUse.ttf') format('truetype');
 }
 
+/* 
+	andreagalanti modifiche 2ottobre2014 
+	Nuove classi
+*/ 
 
+.ippo_input{
+	border-bottom:2px solid #e7406d !important;
+}
+
+.ippo_input_bas{
+	background-image: none !important;
+
+}
+
+/* FONT */
+
+.p_big {font-size:;}
+.p_big_black{font-size:34px; color:#666;}
+
+.p_med{font-size:18px;}
+.p_med_black{font-size:20px; color:#666;}
+
+.p_small{font-size:14px;}
+.p_small_black{font-size:14px; color:#666;}
+
+.link_button{
+background-color: none;
+text-align: center;
+width: 90%;
+height: 60px;
+font-family: 'Roboto';
+font-size: 13px;
+color: red;
+line-height: 50px;
+border:0;
+}
+.link_button::active{
+	background-color: none !important;
+	border:0 !important;
+}
+
+
+
+/* END andreagalanti*/ 
 
 
 .toolbar--ippo-toolbar {
   background:red;
 }
+
 .tb{
 	background-color:rgba(0, 0, 0, 0.7);
 
 
 }
 .logo{
-
 	font-family:'Intrique';
+
 	color:#fafafa;
 	font-size:60px;
 	line-height:50%;
-
-
-
-
 }
+
 .image_intro{
 	width:100%;
 	height:60%;
@@ -38,8 +79,6 @@
 	opacity:0.4;
 	background-size:50%;
 	background-position:center
-
-
 }
 
 .image_log_sign{
@@ -54,6 +93,19 @@
 
 
 }
+
+.image_log_serv{
+
+	width:100%;
+	height:30%;
+	background-image:url(../img/ippo_gc_black.png);
+	background-repeat:no-repeat;
+	opacity:0.4;
+	background-size:50%;
+	background-position:top;
+	margin-top:10%;
+}
+
 .unlog_page {
 	background-color:rgba(0, 0, 0, 0.8);
 	}
