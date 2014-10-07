@@ -13,6 +13,11 @@
 	Nuove classi
 */ 
 
+..toolbar-button, .toolbar-button--outline, .toolbar-button--quiet {
+background-color: rgba(0,0,0,0)!important;
+
+}
+
 .ippo_input{
 	border-bottom:2px solid #e7406d !important;
 }
@@ -22,7 +27,56 @@
 
 }
 
+/* Pagina Interna */
+
+.setting_page {
+  font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 17px;
+  background-color: #fff;
+  background-image: url('../img/prova.jpg') !important;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  overflow: visible;
+  font-size: 17px;
+  color: #1f1f21;
+  background-repeat: no-repeat !important;
+background-size: 100% !important;
+}
+
+.setting_page .page__content {background-color: rgba(255, 255, 255, 0);}
+
+.photo_header {
+	width:100%;
+	height:200px;
+	background-color: #ccc;
+	
+}
+
+.main_info{position: relative;
+z-index: 2;
+margin-top: 200px;
+background: white;}
+
+.text_header{background-color: white; padding:10px 0; margin-bottom: 20px;}
+.text_black_header{background-color: rgba(0, 0, 0, 0.8); padding:10px 0;}
+
 /* FONT */
+h1 {margin:0; padding:0; color:#666 } 
+h2 {
+	margin:0; 
+	padding:0; 
+	color:#666;
+	font-family: 'Roboto';
+	font-size: 24px;
+}
+
+p {margin:0; padding:0; color:#666;font-size: 14px;}
 
 .p_big {font-size:;}
 .p_big_black{font-size:34px; color:#666;}
@@ -79,13 +133,24 @@ border:0;
 
 .image_intro{
 	width:100%;
-	height:60%;
+	height:50%;
 	background-image:url(../img/ippo_cp.png);
 	background-repeat:no-repeat;
 	opacity:0.4;
 	background-size:50%;
 	background-position:center
 }
+
+.image_intro2{
+	width:100%;
+	height:100%;
+	background-image:url(../img/ippo_cp.png);
+	background-repeat:no-repeat;
+	opacity:0.4;
+	background-size:40%;
+	background-position:center
+}
+
 
 .image_log_sign{
 	width:100%;
@@ -131,6 +196,18 @@ border:0;
 
 }
 
+.sign2 {
+	background-color:#e7406d;
+	text-align: center;
+	width: 100%;
+	height:60px;
+	font-family:'Roboto';
+	font-size:20px;
+	color:#fafafa;
+	line-height:50px;
+
+}
+
 .log {
 	background-color:#23a69a;
 	text-align: center;
@@ -142,11 +219,22 @@ border:0;
 	line-height:50px;
 }
 
+.log2{
+	background-color:#23a69a;
+	text-align: center;
+	width: 100%;
+	height:60px;
+	font-family:'Roboto';
+	font-size:20px;
+	color:#fafafa;
+	line-height:50px;
+}
+
 .ons-back-button__icon{color:#fafafa}
 
 .input_area{
 	margin-top:10%;
-	margin-bottom:15%;
+	margin-bottom:10%;
 
 }
 .testo_input{ 
@@ -189,21 +277,21 @@ body.logged .tb{
 }
 
 .photo{
-	width:120px;
-	height:120px;	
-	float:left;
-	margin:2px;
-	background-color:#333;
+	width: 32%;
+	height: 100px;
+	float: left;
+	margin: 0.5%;
+	background-color: #333;
 }
 
 .image_back{
-	width:100%;
-	height:100%;
-	background-image:url(../img/ippo_cp.png);
-	background-repeat:no-repeat;
-	opacity:0.9;
-	background-size:60%;
-	background-position:center;
+	width: 95%;
+	height: 100%;
+	background-image: url(../img/ippo_cp.png);
+	background-repeat: no-repeat;
+	opacity: 0.9;
+	background-size: 60%;
+	background-position: center;
 
 
 }

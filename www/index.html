@@ -399,14 +399,141 @@
       </ons-toolbar>
 	      <!-- Contenuto della pagina principale -->
 	    <div class="photo_container image_back">
-			<div class="photo"></div>
-			<div class="photo"></div>
-			<div class="photo"></div>
-			<div class="photo"></div>
-		</div>
+
+  			 <a onclick="app_navigator.pushPage('int_page.html')"> 
+            <div class="photo"></div>
+          </a>
+
+           <a onclick="app_navigator.pushPage('int_page.html')"> 
+            <div class="photo"></div>
+          </a>
+          
+           <a onclick="app_navigator.pushPage('int_page.html')"> 
+            <div class="photo"></div>
+          </a>
+
+  			<a onclick="app_navigator.pushPage('int_page.html')"> 
+            <div class="photo"></div>
+          </a>
+
+  			<a onclick="app_navigator.pushPage('int_page.html')"> 
+            <div class="photo"></div>
+          </a>
+
+  			<a onclick="app_navigator.pushPage('int_page.html')"> 
+            <div class="photo"></div>
+          </a>
+
+		  </div>
      </ons-page>
 </ons-template>
 
+<!-- Pagina interna --> 
+<ons-template id="int_page.html">
+  <ons-page class="setting_page">
+     <ons-toolbar class="tb">
+          <div class="left"><ons-back-button></ons-back-button></div>
+          <div class="center logo">ippo</div>
+      </ons-toolbar>
+        <!-- Header Photo -->
+        <div class="wrap_int">
+           
+
+            <div class="main_info">
+              <div class="text_header" style="width: 90%; margin:0 auto"> 
+               
+                  <div class="text_header"> 
+                    <div class="account_header" > 
+                        <h2 class=""> ACCOUNT </h2> 
+                        <p style="color: #8D8D8D; margin: 5px 0;"> infoandreagalanti.it </p>
+                    </div>
+                </div>
+              </div> 
+
+              <div class="text_black_header"> 
+               <div class="account_header"> 
+                  <div class="info_header"> 
+                      <div class="account_header" style="width: 90%; margin:0 auto"> 
+                        <h2 style="color:white;"> INFORMAZIONI </h2> 
+
+                         <div class="input_area">
+                            <ons-list class="unlog_list" style="width: 90%; margin:0 auto">
+                              <ons-list-item style="margin-bottom:20px">
+                                <ons-row>
+                              
+                                <ons-col><input type="text" placeholder="Nome" class="text-input text-input--transparent testo_input" style="margin-top:5px; width: 100%;">
+                              </ons-col>      
+                            </ons-row>
+                          </ons-list-item>
+                          <ons-list-item>
+                                <ons-row>
+                              
+                                <ons-col><input type="text" placeholder="Cognome" class="text-input text-input--transparent testo_input" style="margin-top:5px; width: 100%;">
+                              </ons-col>      
+                            </ons-row>
+                          </ons-list-item>
+                            </ons-list>
+                       </div>
+                      </div>
+                  </div> 
+                 </div> 
+
+                 <div class="account_header"> 
+                  <div class="info_header"> 
+                      <div class="account_header" style="width: 90%; margin:0 auto"> 
+                        <h2 style="color:white;"> CAMBIA PASSWORD</h2> 
+
+                         <div class="input_area">
+                            <ons-list class="unlog_list" style="width: 90%; margin:0 auto">
+                              <ons-list-item style="margin-bottom:20px">
+                                <ons-row>
+                              
+                                <ons-col><input type="text" placeholder="Password" class="text-input text-input--transparent testo_input" style="margin-top:5px; width: 100%;">
+                              </ons-col>      
+                            </ons-row>
+                          </ons-list-item>
+                          <ons-list-item>
+                                <ons-row>
+                              
+                                <ons-col><input type="text" placeholder="Conferma" class="text-input text-input--transparent testo_input" style="margin-top:5px; width: 100%;">
+                              </ons-col>      
+                            </ons-row>
+                          </ons-list-item>
+                            </ons-list>
+                       </div>
+                      </div>
+                  </div> 
+                 </div> 
+
+                <div class="account_header"> 
+                  <div class="info_header"> 
+                      <div class="account_header" style="width: 90%; margin:0 auto; ">
+                        <h2 style="margin: 12px 0;color:white;"> DROPBOX</h2> 
+                        <ons-button class="log2" modifier="light" onclick="app_navigator.pushPage('#.html')"> 
+                          Cambia Cartella
+                         </ons-button> 
+                       </div>  
+                  </div> 
+                 </div> 
+
+                  <div class="account_header"> 
+                  <div class="info_header"> 
+                      <div class="account_header"style="width: 90%; margin:0 auto ;"> 
+                        <h2 style="margin: 12px 0;color:white;"> ESCI</h2> 
+                        <ons-button class="sign2" modifier="light" onclick="app_navigator.pushPage('#.html')"> 
+                        Esci
+                         </ons-button> 
+                       </div>  
+                  </div> 
+                 </div> 
+
+           </div>  
+
+
+              </div>  
+        </div>
+     </ons-page>
+</ons-template>
 
 <!--Detail-->
 <ons-template id="detail.html">
