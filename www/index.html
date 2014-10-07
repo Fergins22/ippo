@@ -413,7 +413,7 @@
 </ons-template>
 
 
-
+<!--main-->
 <ons-template id="main.html">
 	<ons-page>
       <ons-toolbar class="tb">
@@ -421,29 +421,35 @@
           		<ons-toolbar-button ng-click="filter_menu.toggleMenu()">
             		<ons-icon icon="ion-navicon-round" style="font-size: 32px; width: 1em">
           		</ons-toolbar-button>
+                <div class="right">
+                <ons-toolbar-button>
+                    <ons-icon icon="fa-ellipsis-v" onclick="app_menu.show()">
+                    </ons-icon>
+                </ons-toolbar-button>
+                </div>
         	</div>
        		<div class="center logo">ippo</div>
       </ons-toolbar>
 	      <!-- Contenuto della pagina principale -->
 	    <div class="photo_container image_back">
 
-  			 <a onclick="app_navigator.pushPage('int_page.html')"> 
+  			 <a onclick="app_navigator.pushPage('detail.html')"> 
             <div class="photo"></div>
           </a>
 
-           <a onclick="app_navigator.pushPage('int_page.html')"> 
+           <a onclick="app_navigator.pushPage('detail.html')"> 
             <div class="photo"></div>
           </a>
           
-           <a onclick="app_navigator.pushPage('int_page.html')"> 
+           <a onclick="app_navigator.pushPage('detail.html')"> 
             <div class="photo"></div>
           </a>
 
-  			<a onclick="app_navigator.pushPage('int_page.html')"> 
+  			<a onclick="app_navigator.pushPage('detail.html')"> 
             <div class="photo"></div>
           </a>
 
-  			<a onclick="app_navigator.pushPage('int_page.html')"> 
+  			<a onclick="app_navigator.pushPage('detail.html')"> 
             <div class="photo"></div>
           </a>
 
@@ -568,6 +574,12 @@
       <ons-toolbar class="tb">
         	<div class="left"><ons-back-button></ons-back-button></div>
        		<div class="center logo">ippo</div>
+            <div class="right">
+                <ons-toolbar-button>
+                    <ons-icon icon="fa-ellipsis-v" onclick="app_menu.show()">
+                    </ons-icon>
+                </ons-toolbar-button>
+            </div>
       </ons-toolbar>
         
         <div>
@@ -582,7 +594,7 @@
      </ons-page>
 </ons-template>
 
-
+<!--slide menu main-->
 <ons-template id="menu.html">
 	<ons-page>
 		<div class="filter-container">
