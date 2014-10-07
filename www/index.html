@@ -282,38 +282,11 @@
      </ons-page>
 </ons-template>  
 
-<!--modale menu-->
-<ons-modal var="app_menu">
-                        <ons-toolbar class="tb">
-                            <div class="center logo">ippo</div>
-                            <div class="right">
-                            <ons-toolbar-button>  
-                            <ons-icon icon="fa-ellipsis-v" onclick="app_menu.toggle()"></ons-icon>
-                            </div>
-                            </ons-toolbar-button>
-                        </ons-toolbar>
-                        <div class="modal-boxright">
-                                <ons-list class="menu-right">
-                                     <ons-list-item>Setting</ons-list-item>
-                                     <ons-list-item>About Ippo</ons-list-item>
-                                     <ons-list-item>Logout</ons-list-item>
-                                     <ons-list-item>Esci</ons-list-item>
-                                </ons-list>
-                            </div>
-                    </ons-modal>     
-    
 <!-- DIRECTORY  -->
 <ons-template id="directory.html">
 	<ons-page>
       <ons-toolbar class="tb">
        		<div class="center logo">ippo</div>
-<!--menu-right modale-->
-            <div class="right">
-                <ons-toolbar-button>
-                    <ons-icon icon="fa-ellipsis-v" onclick="app_menu.show()">
-                    </ons-icon>
-                </ons-toolbar-button>
-            </div>
       </ons-toolbar>
         
         
@@ -440,8 +413,12 @@
            <a onclick="app_navigator.pushPage('detail.html')"> 
             <div class="photo"></div>
           </a>
+
           
            <a onclick="app_navigator.pushPage('detail.html')"> 
+
+           <a onclick="app_navigator.pushPage('int_page.html')"> 
+
             <div class="photo"></div>
           </a>
 
@@ -582,12 +559,13 @@
             </div>
       </ons-toolbar>
         
-        <div>
+        <div class="page-detail">
             <div class="photo-detail">
             </div>  
-            <div class="description">
+            <div class="description" style="width: 90%;
+margin: 0 auto;padding: 20px 0;">
                 <div class="title">Titolo</div>
-                <div class="tags">Web design</div>
+                <div class="tags">Tags</div>
                 <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tempor finibus tortor consequat posuere. Fusce efficitur leo et mauris rhoncus, eget pellentesque lorem ullamcorper. Sed a iaculis tellus </div>
             </div>
 	   </div>

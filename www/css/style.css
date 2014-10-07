@@ -8,11 +8,6 @@
    src: url('font/IntriqueScript_PersonalUse.ttf') format('truetype');
 }
 
-@font-face{
-    font-family: 'Roboto-light';
-    src: url('font/Roboto-Light.ttf') format('truetype');
-}
-
 /* 
 	andreagalanti modifiche 2ottobre2014 
 	Nuove classi
@@ -69,6 +64,7 @@ margin-top: 200px;
 background: white;}
 
 .text_header{background-color: white; padding:10px 0; margin-bottom: 20px;}
+
 .text_black_header{background-color: rgba(0, 0, 0, 0.8); padding:10px 0;}
 
 /* FONT */
@@ -235,14 +231,7 @@ border:0;
 	line-height:50px;
 }
 
-.ons-back-button__icon{
-    color:#fafafa
-}
-
-.ons-icon{
-    color:#fafafa;
-    size:30px;
-}
+.ons-back-button__icon{color:#fafafa}
 
 .input_area{
 	margin-top:10%;
@@ -388,61 +377,34 @@ body.logged .tb{
     background-image: url(../img/dettaglio.jpg);
     width:100%;
     height:355px;
-    background-size: contain;
+	background-size: cover;
     background-repeat: no-repeat;
 }
 
-
-.description{
-    width:100%;
+.page-detail{
     background-color: #23a69a;
-    padding-left:5%;
-    padding-right:5%;
-    
+    width:100%;
+    height:100%;
 }
+
 
 .title{ 
     font-size: 40px;
-    color:#fafafa;
-    font-weight:700;
-    padding-top:20px;
-    padding-bottom:20px;
+    color:#fff;
     
 }
 
 .tags{
     font-size:25px;
-    color:#fafafa;
-    padding-bottom:20px;
-
+    color:#fff;
 }
 
 .text{ 
     font-size:16px;
-    color:#fafafa;
-    padding-bottom:20px;
+    color:#fff;
 }
 
-.modal-boxright{
-    width:50%;
-    position:absolute;
-    margin-left:50%;
-    top:44px;
 
-}
 
-.menu-right{
-    background-color: #333;
 
-}
-
-.menu-right .list__item{
-    color:#fafafa !important;
-    border:2px solid #333;
-    font-family:'Roboto-light';
-    letter-spacing: 0.5px;
-}
-
- .menu-right .list__item:active{
-    background-color:#e7406d; 
- }
+	
