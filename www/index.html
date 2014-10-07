@@ -282,11 +282,38 @@
      </ons-page>
 </ons-template>  
 
+<!--modale menu-->
+<ons-modal var="app_menu">
+                        <ons-toolbar class="tb">
+                            <div class="center logo">ippo</div>
+                            <div class="right">
+                            <ons-toolbar-button>  
+                            <ons-icon icon="fa-ellipsis-v" onclick="app_menu.toggle()"></ons-icon>
+                            </div>
+                            </ons-toolbar-button>
+                        </ons-toolbar>
+                        <div class="modal-boxright">
+                                <ons-list class="menu-right">
+                                     <ons-list-item>Setting</ons-list-item>
+                                     <ons-list-item>About Ippo</ons-list-item>
+                                     <ons-list-item>Logout</ons-list-item>
+                                     <ons-list-item>Esci</ons-list-item>
+                                </ons-list>
+                            </div>
+                    </ons-modal>     
+    
 <!-- DIRECTORY  -->
 <ons-template id="directory.html">
 	<ons-page>
       <ons-toolbar class="tb">
        		<div class="center logo">ippo</div>
+<!--menu-right modale-->
+            <div class="right">
+                <ons-toolbar-button>
+                    <ons-icon icon="fa-ellipsis-v" onclick="app_menu.show()">
+                    </ons-icon>
+                </ons-toolbar-button>
+            </div>
       </ons-toolbar>
         
         
@@ -543,12 +570,12 @@
        		<div class="center logo">ippo</div>
       </ons-toolbar>
         
-        <div class="page-detail">
+        <div>
             <div class="photo-detail">
             </div>  
             <div class="description">
                 <div class="title">Titolo</div>
-                <div class="tags">Tags</div>
+                <div class="tags">Web design</div>
                 <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tempor finibus tortor consequat posuere. Fusce efficitur leo et mauris rhoncus, eget pellentesque lorem ullamcorper. Sed a iaculis tellus </div>
             </div>
 	   </div>
