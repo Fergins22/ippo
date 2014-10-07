@@ -224,6 +224,7 @@ border:0;
 	line-height:50px;
 }
 
+
 .log2{
 	background-color:#23a69a;
 	text-align: center;
@@ -243,6 +244,48 @@ border:0;
     color:#fafafa;
     size:30px;
 }
+
+.ons-back-button__icon{
+	color:#fafafa
+
+}
+
+.ion-navicon-round {
+	color:#fafafa;
+
+}
+.ion-android-more {
+	color:#fafafa;
+
+	
+}
+
+.ion-checkmark-round{
+	color:#fafafa;
+	
+}
+
+body.edit .menu_main_button {
+	display:none;
+}
+
+.ion-edit{
+	color:#fafafa;
+}
+.ion-trash-a{
+	color:#fafafa;
+}
+
+.edit_button{
+	display:none;
+}
+
+body.edit .edit_button{
+	display:block !important;
+
+}
+
+
 
 .input_area{
 	margin-top:10%;
@@ -349,6 +392,7 @@ body.logged .tb{
 	margin-top:44px;
 	background-color:#333;
 	height:500px;
+	display:none;
 }
 
 .list-box{
@@ -382,6 +426,23 @@ body.logged .tb{
     background-color: #444;
     padding-top:15px;
 
+}
+.active_list{
+	display:block !important;
+		background-color:#000 !important;
+
+}
+
+.photo_container{
+	background-color: rgba(0, 0, 0, 0.6) !important;
+}
+
+.ion-navicon-round {
+	display:none !important;
+
+}
+.ion-android-more {
+	display:none !important;
 }
 
 .photo-detail{
