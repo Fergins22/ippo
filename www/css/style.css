@@ -64,6 +64,7 @@ margin-top: 200px;
 background: white;}
 
 .text_header{background-color: white; padding:10px 0; margin-bottom: 20px;}
+.text_header2{padding:10px 0; margin-bottom: 20px;}
 .text_black_header{background-color: rgba(0, 0, 0, 0.8); padding:10px 0;}
 
 /* FONT */
@@ -376,7 +377,7 @@ body.logged .tb{
     background-image: url(../img/dettaglio.jpg);
     width:100%;
     height:355px;
-    background-size: contain;
+	background-size: cover;
     background-repeat: no-repeat;
 }
 
@@ -386,10 +387,6 @@ body.logged .tb{
     height:100%;
 }
 
-.description{
-    width:90%;
-    margin-left:5%;
-}
 
 .title{ 
     font-size: 40px;
