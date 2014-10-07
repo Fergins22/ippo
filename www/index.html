@@ -297,7 +297,7 @@
                         </ons-toolbar>
                         <div class="modal-boxright">
                                 <ons-list class="menu-right">
-                                     <ons-list-item>Setting</ons-list-item>
+                                     <ons-list-item onclick="app_navigator.pushPage('int_page.html')">Setting</ons-list-item>
                                      <ons-list-item>About Ippo</ons-list-item>
                                      <ons-list-item>Logout</ons-list-item>
                                      <ons-list-item>Esci</ons-list-item>
@@ -470,7 +470,7 @@
             <div class="photo"></div>
           </a>
 
-  			<a onclick="app_navigator.pushPage('int_page.html')"> 
+  			<a onclick="app_navigator.pushPage('detail.html')"> 
             <div class="photo"></div>
           </a>
 
@@ -484,6 +484,12 @@
      <ons-toolbar class="tb">
           <div class="left"><ons-back-button></ons-back-button></div>
           <div class="center logo">ippo</div>
+          <div class="right">
+                <ons-toolbar-button>
+                    <ons-icon icon="fa-ellipsis-v" onclick="app_menu.show()">
+                    </ons-icon>
+                </ons-toolbar-button>
+          </div>
       </ons-toolbar>
         <!-- Header Photo -->
         <div class="wrap_int">
