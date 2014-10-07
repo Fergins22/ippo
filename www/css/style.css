@@ -8,6 +8,11 @@
    src: url('font/IntriqueScript_PersonalUse.ttf') format('truetype');
 }
 
+@font-face{
+    font-family: 'Roboto-light';
+    src: url('font/Roboto-Light.ttf') format('truetype');
+}
+
 /* 
 	andreagalanti modifiche 2ottobre2014 
 	Nuove classi
@@ -220,6 +225,7 @@ border:0;
 	line-height:50px;
 }
 
+
 .log2{
 	background-color:#23a69a;
 	text-align: center;
@@ -231,7 +237,56 @@ border:0;
 	line-height:50px;
 }
 
-.ons-back-button__icon{color:#fafafa}
+.ons-back-button__icon{
+    color:#fafafa
+}
+
+.ons-icon{
+    color:#fafafa;
+    size:30px;
+}
+
+.ons-back-button__icon{
+	color:#fafafa
+
+}
+
+.ion-navicon-round {
+	color:#fafafa;
+
+}
+.ion-android-more {
+	color:#fafafa;
+
+	
+}
+
+.ion-checkmark-round{
+	color:#fafafa;
+	
+}
+
+body.edit .menu_main_button {
+	display:none;
+}
+
+.ion-edit{
+	color:#fafafa;
+}
+.ion-trash-a{
+	color:#fafafa;
+}
+
+.edit_button{
+	display:none;
+}
+
+body.edit .edit_button{
+	display:block !important;
+
+}
+
+
 
 .input_area{
 	margin-top:10%;
@@ -338,6 +393,7 @@ body.logged .tb{
 	margin-top:44px;
 	background-color:#333;
 	height:500px;
+	display:none;
 }
 
 .list-box{
@@ -372,6 +428,23 @@ body.logged .tb{
     padding-top:15px;
 
 }
+.active_list{
+	display:block !important;
+		background-color:#000 !important;
+
+}
+
+.photo_container{
+	background-color: rgba(0, 0, 0, 0.6) !important;
+}
+
+.ion-navicon-round {
+	display:none !important;
+
+}
+.ion-android-more {
+	display:none !important;
+}
 
 .photo-detail{
     background-image: url(../img/dettaglio.jpg);
@@ -381,30 +454,57 @@ body.logged .tb{
     background-repeat: no-repeat;
 }
 
-.page-detail{
-    background-color: #23a69a;
-    width:100%;
-    height:100%;
-}
 
+.description{
+    width:100%;
+    background-color: #23a69a;
+    padding-left:5%;
+    padding-right:5%;
+    
+}
 
 .title{ 
     font-size: 40px;
-    color:#fff;
+    color:#fafafa;
+    font-weight:700;
+    padding-top:20px;
+    padding-bottom:20px;
     
 }
 
 .tags{
     font-size:25px;
-    color:#fff;
+    color:#fafafa;
+    padding-bottom:20px;
+
 }
 
 .text{ 
     font-size:16px;
-    color:#fff;
+    color:#fafafa;
+    padding-bottom:20px;
 }
 
+.modal-boxright{
+    width:50%;
+    position:absolute;
+    margin-left:50%;
+    top:44px;
 
+}
 
+.menu-right{
+    background-color: #333;
 
-	
+}
+
+.menu-right .list__item{
+    color:#fafafa !important;
+    border:2px solid #333;
+    font-family:'Roboto-light';
+    letter-spacing: 0.5px;
+}
+
+ .menu-right .list__item:active{
+    background-color:#e7406d; 
+ }

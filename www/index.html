@@ -74,9 +74,13 @@
 </head>
 
 
-<body class="logged">
+
     
 <!-- Contenuto della pagina principale -->
+
+<body class="logged edit">
+
+
 <ons-navigator var="app_navigator">
   <ons-page >
 	<ons-toolbar class="tb">
@@ -282,11 +286,38 @@
      </ons-page>
 </ons-template>  
 
+<!--modale menu-->
+<ons-modal var="app_menu">
+                        <ons-toolbar class="tb">
+                            <div class="center logo">ippo</div>
+                            <div class="right">
+                            <ons-toolbar-button>  
+                            <ons-icon icon="fa-ellipsis-v" onclick="app_menu.toggle()"></ons-icon>
+                            </div>
+                            </ons-toolbar-button>
+                        </ons-toolbar>
+                        <div class="modal-boxright">
+                                <ons-list class="menu-right">
+                                     <ons-list-item>Setting</ons-list-item>
+                                     <ons-list-item>About Ippo</ons-list-item>
+                                     <ons-list-item>Logout</ons-list-item>
+                                     <ons-list-item>Esci</ons-list-item>
+                                </ons-list>
+                            </div>
+                    </ons-modal>     
+    
 <!-- DIRECTORY  -->
 <ons-template id="directory.html">
 	<ons-page>
       <ons-toolbar class="tb">
        		<div class="center logo">ippo</div>
+<!--menu-right modale-->
+            <div class="right">
+                <ons-toolbar-button>
+                    <ons-icon icon="fa-ellipsis-v" onclick="app_menu.show()">
+                    </ons-icon>
+                </ons-toolbar-button>
+            </div>
       </ons-toolbar>
         
         
@@ -388,14 +419,32 @@
 
 
 <ons-template id="main.html">
-	<ons-page>
+	<ons-page >
       <ons-toolbar class="tb">
       		<div class="left">
-          		<ons-toolbar-button ng-click="filter_menu.toggleMenu()">
+          		<ons-toolbar-button class="menu_main_button" ng-click="filter_menu.toggleMenu()">
             		<ons-icon icon="ion-navicon-round" style="font-size: 32px; width: 1em">
           		</ons-toolbar-button>
+          		<ons-toolbar-button class="edit_button">
+          			<ons-icon icon="ion-checkmark-round" style="font-size: 32px; width: 1em">
+        		</ons-toolbar-button>
         	</div>
        		<div class="center logo">ippo</div>
+       		
+       		<div class="right">
+       			<ons-toolbar-button id="show-modal" class="menu_main_button" modifier="light" >
+       				<ons-icon icon="ion-android-more" style="font-size: 24px; width: 1em">
+       			</ons-toolbar-button>
+       			
+       			<ons-toolbar-button id="edit_button" modifier="light" >
+       				<ons-icon icon="ion-edit" style="font-size: 24px; width: 1em">
+       			</ons-toolbar-button>
+       			
+       			<ons-toolbar-button id="edit_button" modifier="light" >
+       				<ons-icon icon="ion-trash-a" style="font-size: 24px; width: 1em">
+       			</ons-toolbar-button>
+        	</div>
+
       </ons-toolbar>
 	      <!-- Contenuto della pagina principale -->
 	    <div class="photo_container image_back">
@@ -543,12 +592,10 @@
        		<div class="center logo">ippo</div>
       </ons-toolbar>
         
-        <div class="page-detail">
+        <div>
             <div class="photo-detail">
             </div>  
-           
-
-              <div class="text_header2" style="width: 90%; margin:0 auto"> 
+                 <div class="text_header2" style="width: 90%; margin:0 auto"> 
                
                   <div class="text_header2"> 
                     <div class="account_header" > 
@@ -558,7 +605,6 @@
                     </div>
                 </div>
               </div> 
-            
 	   </div>
      </ons-page>
 </ons-template>
@@ -576,10 +622,10 @@
 		</div>	
 		
 		<div class="list-container-menu">
-			<div class="filter_list active_list">
+			<div class="filter_list project_list active_list">
 				<ons-scroller>
       				<ons-list>
-      					<ons-list-item class="list-box">project name</ons-list-item>
+      					<ons-list-item class="list-box" >project name</ons-list-item>
       					<ons-list-item class="list-box">project name</ons-list-item>
       					<ons-list-item class="list-box">project name</ons-list-item>
       					<ons-list-item class="list-box">project name</ons-list-item>
@@ -591,8 +637,27 @@
       					<ons-list-item class="list-box">project name</ons-list-item>
 
       		
-      			</ons-list>
-      		</ons-scroller>
+      				</ons-list>
+      			</ons-scroller>
+      		</div>
+      		
+      		<div class="filter_list tag_list">
+				<ons-scroller>
+      				<ons-list>
+      					<ons-list-item class="list-box" >tag name</ons-list-item>
+      					<ons-list-item class="list-box">tag name</ons-list-item>
+      					<ons-list-item class="list-box">tag name</ons-list-item>
+      					<ons-list-item class="list-box">tag name</ons-list-item>
+      					<ons-list-item class="list-box">tag name</ons-list-item>
+      					<ons-list-item class="list-box">tag name</ons-list-item>
+      					<ons-list-item class="list-box">tag name</ons-list-item>
+      					<ons-list-item class="list-box">tag name</ons-list-item>
+      					<ons-list-item class="list-box">tag name</ons-list-item>
+      					<ons-list-item class="list-box">tag name</ons-list-item>
+
+      		
+      				</ons-list>
+      			</ons-scroller>
       		</div>
 		</div>
 	</ons-page>
