@@ -8,6 +8,12 @@
    src: url('font/IntriqueScript_PersonalUse.ttf') format('truetype');
 }
 
+@font-face{
+    font-family: 'Roboto-light';
+    src: url('font/Roboto-Light.ttf') format('truetype');
+}
+
+
 /* 
 	andreagalanti modifiche 2ottobre2014 
 	Nuove classi
@@ -231,11 +237,19 @@ border:0;
 	line-height:50px;
 }
 
-.ons-back-button__icon{color:#fafafa}
+.ons-back-button__icon{
+    color:#fafafa
+}
+
+.ons-icon{
+    color:#fafafa;
+    size:30px;
+}
 
 .input_area{
 	margin-top:10%;
 	margin-bottom:10%;
+
 
 }
 .testo_input{ 
@@ -404,7 +418,79 @@ body.logged .tb{
     color:#fff;
 }
 
+.modal-boxright{
+    width:50%;
+    position:absolute;
+    margin-left:50%;
+    top:44px;
 
+}
 
+.menu-right{
+    background-color: #333;
+
+}
+
+.menu-right .list__item{
+    color:#fafafa !important;
+    border:2px solid #333;
+    font-family:'Roboto-light';
+    letter-spacing: 0.5px;
+}
+
+ .menu-right .list__item:active{
+    background-color:#e7406d; 
+ }
+
+.ons-back-button__icon{
+	color:#fafafa
+
+}
+
+.ion-navicon-round {
+	color:#fafafa;
+
+}
+.ion-android-more {
+	color:#fafafa;
 
 	
+}
+
+.ion-checkmark-round{
+	color:#fafafa;
+	
+}
+
+body.edit .menu_main_button {
+	display:none;
+}
+
+.ion-edit{
+	color:#fafafa;
+}
+
+}
+.ion-trash-a{
+	color:#fafafa;
+}
+
+.edit_button{
+	display:none;
+}
+
+body.edit .edit_button{
+	display:block !important;
+
+}
+
+.active_list{
+	display:block !important;
+		background-color:#000 !important;
+
+}
+
+.photo_container{
+	background-color: rgba(0, 0, 0, 0.6) !important;
+}
+
